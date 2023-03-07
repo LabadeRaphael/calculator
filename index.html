@@ -1,0 +1,100 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="calculator.js"></script>
+</head>
+<body onload="clock()">
+    <div class="container ps-lg-0 ps-2 pe-lg-0 pe-2 mt-lg-0 mt-5 col-lg-3 col-11 mx-auto">
+        <div class="row">
+            <div class="col-lg-3 col-lg-11 col-10 mx-auto shadow p-3">
+                <div class="d-flex">
+                    <div class="col-7">
+                        <h3 class="fw-bold ms-4">CASIO<small></small></h3>
+                        <span class="ms-5">fx-991EX</span>
+                        <h5 style="font-family: cursive;">CLASSWIZ<small></small></h5>
+                    </div>
+                    <div class="bg-danger mx-auto col-5 mb-5 mt-1 rounded-2" id="calclock"></div>
+                </div>
+                <hr>
+                <div class="bg-warning row rounded-2" style="min-height: 50px;">
+                    <div class="col-7 mb-4 fw-bold" id="display"></div>
+                    <div id="displayanswer" class="col-5 my-auto text-end fw-bold pe-2"></div>
+                </div>
+                <hr>
+                <div class="col-lg-12 col-11 bg-light mx-auto rounded-2">
+                    <div class="col-lg-12 col-12 rounded-2" style="background-color: bisque;">
+                        <div class="ms-2">
+                            <button class="btn col-2 ps-1 mt-1 bg-light ms-1 mb-1 fw-bold" onclick="calculate()">calc</button>
+                            <button class="btn bg- col-2 bg-light ps-2  mt-1 mb-1" onclick="cubeRoot()">
+                            <img src="cuberootimages.jpg" width="25" alt=""></button>
+                            <button class="btn bg- col-2 bg-light ps-2  mt-1 mb-1 ms-1" onclick="squareRoot()"><img src="squareroot.png" width="25" alt="" id="imageId"></button>
+                            <button class="btn bg- col-2 bg-light ps-2  mt-1 mb-1 rounded-5 ms-1 fw-bold fw-bold"
+                            onclick="on()">ON</button>
+                            <button class="btn bg- col-2 bg-light ps-2  mt-1 mb-1 rounded-5 fw-bold"
+                            onclick="off()">OFF</button>
+                            <button class="btn bg- col-2 bg-light ps-2  mt-1 mb-1 ms-1 fw-bold"
+                            onclick="powerBtn()">X<sup>2</sup></button>
+                            <button class="btn bg- col-2 bg-light ps-2  mt-1 mb-1 ms-1 fw-bold"
+                            onclick="cubePowerBtn()">X<sup>3</sup></button>
+                            <button class="btn bg- col-2 bg-light pe-1 mt-1 ms-1 mb-1 fw-bold"
+                            onclick="powerBtnNegative()">X<sup>-1</sup></button>
+                            <button class="btn bg- col-2 bg-light mt-1 fw-bold" onclick="sinBtn()">sin</button>
+                            <button class="btn bg- col-2 bg-light ps-2 mt-1 mb-1 fw-bold"
+                            onclick="cosBtn()">cos</button>
+                            <button class="btn bg- col-2 bg-light ps-2 mt-1 ms-1 mb-1 fw-bold"
+                            onclick="tanBtn()">tan</button>
+                            <button class="btn bg- col-2 bg-light ps-2 mt-1 ms-1 mb-1 fw-bold"
+                            onclick="logBtn('log')">log</button>
+                            <button class="btn bg- col-2 bg-light ps-2 mt-1 ms-1 mb-1 fw-bold"
+                            onclick="clickBtn('(')">(</button>
+                            <button class="btn bg- col-2 bg-light ps-2 mt-1 mb-1 fw-bold" onclick="clickBtn(')')">)</button>
+                            <button class="btn bg- col-2 bg-light mt-1 mb-1 me-1 fw-bold" onclick=" percentBtn()">%</button>
+                            <button class="btn bg- col-3 bg-light mt-1 mb-1 fw-bold"
+                            onclick="sinInverseBtn()">sin<sup>-1</sup></button>
+                            <button class="btn bg- col-3 bg-light mt-1 mb-1 fw-bold"
+                            onclick="cosInverseBtn()">cos<sup>-1</sup></button>
+                            <button class="btn bg- col-3 bg-light mt-1 mb-1 fw-bold"
+                            onclick="tanInverseBtn()">tan<sup>-1</sup></button>
+                            <button class="btn bg-light ps-2 col-lg-2  mt-1 mb-1" onclick="pieBtn()"><img src="pie.png" width="20px" alt="" id="imageId"></button>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-12">
+                        <div class="ms-2">
+                            <button class="btn  bg-danger col-2 mb-2 mt-3" onclick="clickBtn(7)">7</button>
+                            <button class="btn  bg-danger col-2 mb-2 mt-3 ms-1" onclick="clickBtn(8)">8</button>
+                            <button class="btn  bg-danger col-2 mb-2 mt-3 ms-1" onclick="clickBtn(9)">9</button>
+                            <button class="btn  col-2 mb-2 mt-3 bg-info ps-2 ms-1 fw-bold" onclick="del()">Del</button>
+                            <button class="btn  col-2 mb-2 mt-3 bg-info fw-bold" onclick="ac()">Ac</button>
+    
+                            <button class="btn  bg-danger col-2 mb-2" onclick="clickBtn(4)">4</button>
+                            <button class="btn  bg-danger col-2 mb-2 ms-1" onclick="clickBtn(5)">5</button>
+                            <button class="btn  bg-danger col-2 mb-2 ms-1" onclick="clickBtn(6)">6</button>
+                            <button class="btn  bg-danger col-2 mb-2 ms-1" onclick="clickBtn('*')">X</button>
+                            <button class="btn  bg-danger col-2 mb-2" onclick="clickBtn('/')">/</button><br>
+    
+                            <button class="btn  bg-danger col-2 mb-2" onclick="clickBtn(1)">1</button>
+                            <button class="btn  bg-danger col-2 mb-2 ms-1" onclick="clickBtn(2)">2</button>
+                            <button class="btn  bg-danger col-2 mb-2 ms-1" onclick="clickBtn(3)">3</button>
+                            <button class="btn  bg-danger col-2 mb-2 ms-1" onclick="clickBtn('+')">+</button>
+                            <button class="btn  bg-danger col-2 mb-2" onclick="clickBtn('-')">-</button><br>
+    
+                            <button class="btn  bg-danger col-2 mb-3" onclick="clickBtn(0)">0</button>
+                            <button class="btn  bg-danger col-2 mb-3 text-center ms-1"
+                            onclick="clickBtn('00')">00</button>
+                            <button class="btn  bg-danger col-2 mb-3 ms-1"
+                            onclick="clickBtn('.')"><strong>.</strong></button>
+                            <button class="btn  bg-danger col-2 mb-3 ps-2 ms-1" onclick="ans()">Ans</button>
+                            <button class="btn  bg-danger col-2 mb-3" onclick="calculate()">=</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
